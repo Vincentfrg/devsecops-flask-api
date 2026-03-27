@@ -1,5 +1,7 @@
 package main
 
+# Refuse tout deploiement Kubernetes dont le conteneur
+# s execute en tant que root (absence de runAsNonRoot: true)
 deny[msg] {
   input.kind == "Deployment"
   container := input.spec.template.spec.containers[_]

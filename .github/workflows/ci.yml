@@ -48,7 +48,7 @@ jobs:
           scan-ref: .
           format: table
           severity: CRITICAL,HIGH,MEDIUM
-          exit-code: 0
+          exit-code: '0'
 
   trivy-image-scan:
     name: Trivy Scan Image Docker
@@ -68,7 +68,7 @@ jobs:
           image-ref: flask-api:latest
           format: table
           severity: CRITICAL,HIGH,MEDIUM
-          exit-code: 0
+          exit-code: '0'
 
   conftest-policy:
     name: Conftest Politique Kubernetes
