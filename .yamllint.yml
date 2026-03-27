@@ -1,9 +1,12 @@
+---
 extends: default
 
 rules:
   line-length:
     max: 120
   truthy:
-    allowed-values: ["true", "false"]
+    level: warning
   comments:
     min-spaces-from-content: 1
+  document-start:
+    present: true
